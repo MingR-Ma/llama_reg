@@ -995,7 +995,7 @@ if __name__ == '__main__':
                             "n_heads": 32, "n_layers": 32, "norm_eps": 1.0e-6,
                             "vocab_size": -1, "first_layer": 31}
     llama = LLaMATransformer(llama_default_config)
-    checkpoints = '/home/mamingrui/PycharmProjects/RegLLaMA/LLaMA/llama-2-7b/consolidated.00.pth'
+    checkpoints = './LLaMA/llama-2-7b/consolidated.00.pth'
     checkpoint = torch.load(checkpoints, map_location="cpu")
     llama.custom_load_state_dict(checkpoint)
     llama.cuda()
